@@ -320,13 +320,7 @@ AOS.init({
   easing: 'ease-out-cubic'
 });
 
-/* ===== DOWNLOAD CV ===== */
-document.querySelectorAll('.about-cta .btn-outline').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    alert('Fitur download CV akan segera tersedia. Silakan hubungi saya langsung untuk mendapatkan CV.');
-  });
-});
+
 
 console.log('%c Portofolio Alvino Agung Wijaya ',
   'background:#38bdf8;color:#0f172a;font-size:1.2rem;font-weight:bold;padding:10px 20px;border-radius:5px;');

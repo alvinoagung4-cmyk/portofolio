@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Alvino Agung Wijaya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --accent: #818cf8;
+      --dark: #0f172a;
+      --dark2: #1e293b;
+      --text: #334155;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --sidebar: #0f172a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+
+    .cv {
+      max-width: 900px;
+      width: 100%;
+      background: var(--bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      background: var(--sidebar);
+      color: #fff;
+      padding: 2.5rem 2rem;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin: 0 auto 1.5rem;
+      box-shadow: 0 8px 25px rgba(56,189,248,0.3);
+    }
+    .sidebar h2 {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .sidebar .title {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.8rem;
+    }
+    .sidebar-section h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.7rem;
+    }
+    .contact-item i {
+      width: 18px;
+      color: var(--primary);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .contact-item a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item a:hover { color: var(--primary); }
+
+    .skill-item {
+      margin-bottom: 0.8rem;
+    }
+    .skill-item .label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      margin-bottom: 0.3rem;
+      color: rgba(255,255,255,0.7);
+    }
+    .skill-bar {
+      height: 5px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .skill-bar .fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== MAIN ===== */
+    .main {
+      padding: 2.5rem 2.5rem;
+    }
+    .main h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 0.3rem;
+    }
+    .main h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .main .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .main-section {
+      margin-bottom: 1.8rem;
+    }
+    .main-section h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--primary-dark);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .main-section p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .exp-item {
+      margin-bottom: 1.2rem;
+    }
+    .exp-item .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+    .exp-item .exp-header h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .exp-item .exp-header .date {
+      font-size: 0.75rem;
+      color: var(--primary);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .exp-item .exp-sub {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 0.3rem;
+    }
+    .exp-item .exp-desc {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .cert-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .cert-list span {
+      padding: 0.3rem 0.8rem;
+      border-radius: 50px;
+      background: rgba(56,189,248,0.08);
+      border: 1px solid rgba(56,189,248,0.15);
+      color: var(--primary-dark);
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(56,189,248,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-dark);
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-links a:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .print-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 8px 25px rgba(56,189,248,0.3);
+      transition: all 0.3s;
+      z-index: 100;
+      font-family: 'Inter', sans-serif;
+    }
+    .print-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(56,189,248,0.4);
+    }
+
+    @media print {
+      body { padding: 0; background: #fff; }
+      .cv { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .print-btn { display: none; }
+    }
+
+    @media (max-width: 700px) {
+      .cv { grid-template-columns: 1fr; }
+      .sidebar { padding: 2rem 1.5rem; }
+      .main { padding: 2rem 1.5rem; }
+      .exp-item .exp-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="avatar">AV</div>
+      <h2>Alvino Agung Wijaya</h2>
+      <p class="title">Web Developer &amp; Programmer</p>
+
+      <div class="sidebar-section">
+        <h3>Kontak</h3>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:alvinoagung41@gmail.com">alvinoagung41@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>085737468424</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Kepanjen, Malang</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-instagram"></i>
+          <a href="https://instagram.com/vinoagg" target="_blank">@vinoagg</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-tiktok"></i>
+          <a href="https://tiktok.com/@vinoaggwjy" target="_blank">@vinoaggwjy</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Keahlian</h3>
+        <div class="skill-item">
+          <div class="label"><span>HTML5</span><span>90%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>CSS3</span><span>85%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>JavaScript</span><span>75%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>React</span><span>60%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:60%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>PHP</span><span>70%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>MySQL</span><span>75%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="label"><span>Git &amp; GitHub</span><span>80%</span></div>
+          <div class="skill-bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Bahasa</h3>
+        <div class="lang-item"><span>Indonesia</span><span>Native</span></div>
+        <div class="lang-item"><span>Inggris</span><span>Pasif</span></div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <h1>Alvino <span>Agung Wijaya</span></h1>
+      <p class="subtitle">Siswa SMKN 1 Kepanjen | Rekayasa Perangkat Lunak</p>
+
+      <div class="main-section">
+        <h3>Tentang Saya</h3>
+        <p>
+          Siswa kelas 12 jurusan Rekayasa Perangkat Lunak (RPL) di SMKN 1 Kepanjen dengan pengalaman 
+          Praktik Kerja Lapangan di Institut Teknologi Nasional (ITN) Malang. Memiliki ketertarikan 
+          besar dalam pengembangan web dan pemrograman. Aktif mengikuti pelatihan, workshop, dan 
+          kompetisi untuk mengembangkan skill di bidang teknologi.
+        </p>
+      </div>
+
+      <div class="main-section">
+        <h3>Pengalaman</h3>
+        <div class="exp-item">
+          <div class="exp-header">
+            <h4>Praktik Kerja Lapangan (PKL)</h4>
+            <span class="date">2025 - 2026</span>
+          </div>
+          <div class="exp-sub">Institut Teknologi Nasional (ITN) Malang</div>
+          <div class="exp-desc">
+            Terlibat dalam proyek pengembangan coding dan sistem bersama tim IT kampus. Mendapat 
+            pengalaman bekerja di lingkungan profesional, menyelesaikan tugas tepat waktu, dan 
+            berkolaborasi dalam tim.
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-header">
+            <h4>Freelance Web Developer</h4>
+            <span class="date">2025 - Sekarang</span>
+          </div>
+          <div class="exp-sub">Proyek Mandiri</div>
+          <div class="exp-desc">
+            Mengerjakan berbagai proyek pembuatan website untuk teman, keluarga, dan klien kecil. 
+            Membangun portofolio dan pengalaman kerja nyata.
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <h3>Pendidikan</h3>
+        <div class="exp-item">
+          <div class="exp-header">
+            <h4>SMKN 1 Kepanjen</h4>
+            <span class="date">2024 - Sekarang</span>
+          </div>
+          <div class="exp-sub">Jurusan Rekayasa Perangkat Lunak (RPL)</div>
+          <div class="exp-desc">
+            Mempelajari dasar-dasar pemrograman, pengembangan web, basis data, dan rekayasa 
+            perangkat lunak. Aktif dalam berbagai kegiatan dan proyek sekolah.
+          </div>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <h3>Sertifikat</h3>
+        <div class="cert-list">
+          <span>Belajar Dasar Pemrograman Web</span>
+          <span>Belajar JavaScript Dasar</span>
+          <span>Fundamental CSS3</span>
+          <span>React Development</span>
+        </div>
+      </div>
+
+      <div class="main-section">
+        <h3>Ikuti Saya</h3>
+        <div class="social-links">
+          <a href="https://instagram.com/vinoagg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@vinoaggwjy" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="mailto:alvinoagung41@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="print-btn" onclick="window.print()">
+    <i class="fas fa-download"></i> Download / Print PDF
+  </button>
+
+</body>
+</html>
