@@ -1001,10 +1001,11 @@ body.light #header.scrolled {
 .cl-indent-2 { padding-left: 2.4rem; }
 .cursor-blink {
   color: #38bdf8;
-  animation: blink 0.8s step-end infinite;
+  animation: cursorBlink 0.8s step-end infinite;
   font-weight: 700;
 }
-@keyframes blink {
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
